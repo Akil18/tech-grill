@@ -49,10 +49,14 @@ function App() {
                       handleOptionClick={handleOptionClick}
                       handleShowAnswer={handleShowAnswer}
                     /> },
-        { path: '/statistics', element: <Statistics /> },
+        { 
+          path: '/statistics', 
+          loader: () => fetch(`https://openapi.programming-hero.com/api/quiz`),
+          element: <Statistics /> },
         { path: '/blog', element: <Blog /> },
       ]
     },
+    { path: '*', element: <h1>Nothing to show here!</h1> }
   ])
 
   return (
