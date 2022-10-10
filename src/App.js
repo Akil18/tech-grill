@@ -29,6 +29,10 @@ function App() {
     }
   }
 
+  const handleShowAnswer = (answer) => {
+    notify(answer);
+  }
+
   const router = createBrowserRouter([
     { 
       path: '/', 
@@ -41,7 +45,10 @@ function App() {
         { 
           path: '/:sectionId', 
           loader: ({ params }) => fetch(`https://openapi.programming-hero.com/api/quiz/${params.sectionId}`),
-          element: <Section handleOptionClick={handleOptionClick} /> },
+          element: <Section 
+                      handleOptionClick={handleOptionClick}
+                      handleShowAnswer={handleShowAnswer}
+                    /> },
         { path: '/statistics', element: <Statistics /> },
         { path: '/blog', element: <Blog /> },
       ]
