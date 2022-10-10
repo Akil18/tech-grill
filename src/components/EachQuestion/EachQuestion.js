@@ -2,6 +2,7 @@ import React from 'react';
 
 const EachQuestion = ({each, handleOptionClick}) => {
     const {question, options, correctAnswer} = each;
+
     return (
         <div className="mx-36 my-20 border-2 border-green-500">
             <h1 className="m-4">{question}</h1>

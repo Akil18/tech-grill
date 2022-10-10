@@ -2,14 +2,10 @@ import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import EachQuestion from '../EachQuestion/EachQuestion';
 
-const Section = () => {
+const Section = ({handleOptionClick}) => {
     const questionsData = useLoaderData();
     const questions = questionsData.data.questions;
     console.log(questions);
-    
-    const handleOptionClick = (option) => {
-        console.log(option);
-    }
 
     return (
         <div>
