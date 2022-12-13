@@ -1,4 +1,4 @@
-# Assignment 9(Quiz Website) : Tech Grill
+# Quiz Website : Tech Grill
 
 Live Website: https://tech-grill.netlify.app/
 
